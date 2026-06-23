@@ -385,11 +385,13 @@ main.container {
 
 .table-wrapper {
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 table {
     width: 100%;
-    table-layout: fixed;
+    min-width: 900px;
+    border-collapse: collapse;
 }
 
 th,
@@ -411,6 +413,14 @@ td.subject {
     text-overflow: ellipsis;
 }
 
+td.name {
+    min-width: 180px;
+}
+
+td.subject {
+    min-width: 150px;
+}
+
 tr.empty-row {
     text-align: center;
     padding: 3rem 1rem;
@@ -421,7 +431,7 @@ tr.empty-row {
 }
 
 .actions {
-    width: 160px;
+    min-width: 140px;
     white-space: nowrap;
 }
 
